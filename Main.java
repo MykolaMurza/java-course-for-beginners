@@ -1,22 +1,17 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Map<String, String> users = new HashMap<>();
-        users.put("username", "password");
-        users.put("admin", "root");
+        boolean a = returnFalse() && returnTrue();
+        System.out.println("=====");
+        boolean b = returnFalse() & returnTrue();
+    }
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter your username: ");
-        String username = scan.nextLine();
+    public static boolean returnFalse() {
+        System.out.println("false");
+        return false;
+    }
 
-        if (users.containsKey(username)) {
-            System.out.print("Enter your password: ");
-            // ...
-        } else {
-            throw new UserNotFoundException();
-        }
+    public static boolean returnTrue() {
+        System.out.println("true");
+        return true;
     }
 }
