@@ -2,9 +2,10 @@ import java.util.List;
 
 public non-sealed class Professor extends Employee {
     private int msgSent;
-    private List<AcademicField> fields;
+    private final List<AcademicField> fields;
 
-    public Professor(String name, String surname, int experience, AcademicStatus academicStatus, List<AcademicField> fields) {
+    public Professor(String name, String surname, int experience,
+                     AcademicStatus academicStatus, List<AcademicField> fields) {
         super(name, surname, experience, academicStatus);
         this.msgSent = 0;
         this.fields = fields;
